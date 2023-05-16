@@ -53,7 +53,12 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        $menulinks = config('menulinks');
+        $footerlinks = config('footerlinks');
+        $socialicons = config('socialicons');
+        $mainnavicons = config('mainnavicons');
+
+        return view('comics/show', compact('comic', 'menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
     }
 
     /**

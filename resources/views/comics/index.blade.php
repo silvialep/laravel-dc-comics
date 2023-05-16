@@ -16,7 +16,7 @@
     
             <div class="col-2 d-flex flex-column gap-2 mb-5">
                 <div class="image-container">
-                    <a href=""><img src="{{$singleComic['thumb']}}" alt="comic cover"></a>
+                    <a href="{{route('comics.show', $singleComic->id)}}"><img src="{{$singleComic['thumb']}}" alt="comic cover"></a>
                 </div>
                 <span class="comic-series pt-2">{{$singleComic['series']}}</span>
             </div>

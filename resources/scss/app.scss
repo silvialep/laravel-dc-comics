@@ -244,15 +244,16 @@ a {
     #comic-container {
         display: flex;
         justify-content: space-between;
+        gap: 40px;
         background-color: white;
-        height: 400px;
+        min-height: 400px;
         width: 100%;
         padding: 30px 0;
 
         #single-comic {
             display: flex;
             flex-flow: column nowrap;
-            gap: 10px;
+            gap: 30px;
 
             h2 {
                 font-size: 1.7rem;
@@ -260,6 +261,50 @@ a {
                 text-transform: uppercase;
                 color: rgb(0, 63, 94);
             }
+
+            .green-bar {
+                display: flex;
+                align-items: center;
+                background-color: rgb(85, 186, 89);
+                width: 100%;
+                min-height: 60px;
+                font-size: 1.2rem;
+
+                span {
+                    padding: 0 20px;
+                    color: rgb(183, 253, 156);
+                }
+
+                .price-tag {
+                    color: white;
+                }
+            }
+
+            .comic-description {
+                font-size: 1.2rem;
+            }
+        }
+
+        #pubbli-section {
+            min-width: 400px;
+
+            .pubbli-container {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-end;
+                width: 100%;
+
+                span {
+                    text-transform: uppercase;
+                }
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
+    
+            }
+
         }
     }
 
