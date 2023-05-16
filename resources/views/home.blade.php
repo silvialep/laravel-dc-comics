@@ -31,4 +31,7 @@
     </div>
 
 </div>
+
+@include('partials/blue-nav')
+
 @endsection

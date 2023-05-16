@@ -12,7 +12,8 @@ class PageController extends Controller
         $menulinks = config('menulinks');
         $footerlinks = config('footerlinks');
         $socialicons = config('socialicons');
+        $mainnavicons = config('mainnavicons');
 
-        return view('home', compact('comics', 'menulinks', 'footerlinks', 'socialicons'));
+        return view('home', compact('comics', 'menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
     }
 }

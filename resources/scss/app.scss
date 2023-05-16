@@ -171,6 +171,38 @@ a {
 
 }
 
+#blue-nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(2, 130, 249);
+    height: 200px;
+    width: 100%;
+
+    #blue-nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        #icon-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: calc(100% / 5);
+            height: 60px;
+
+            img {
+                height: 100%;
+            }
+
+            span {
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+}
+
 
 .image-container {
     width: 100%;
