@@ -8,7 +8,7 @@
     <nav id="main-nav">
         <div id="main-nav-container" class="container">
             <div id="nav-logo">
-                <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="comics-logo">
+                <a href="{{route('homepage')}}"><img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="comics-logo"></a>
             </div>
             <div id="nav-menu">
                 <ul>

@@ -131,7 +131,7 @@ a {
         #comics-tag {
             position: absolute;
             top: -4%;
-            width: 200px;
+            width: 240px;
             height: 60px;
             text-align: center;
             font-weight: bolder;
@@ -192,8 +192,13 @@ a {
 
             img {
                 height: 100%;
+
             }
 
+            .img-small {
+                height: 80%;
+            }
+            
             span {
                 color: white;
                 text-transform: uppercase;

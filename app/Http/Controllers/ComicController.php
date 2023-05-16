@@ -14,7 +14,14 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::all();
+
+        $menulinks = config('menulinks');
+        $footerlinks = config('footerlinks');
+        $socialicons = config('socialicons');
+        $mainnavicons = config('mainnavicons');
+
+        return view('comics/index', compact('comics', 'menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
     }
 
     /**
