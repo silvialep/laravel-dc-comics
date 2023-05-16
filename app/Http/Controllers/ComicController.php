@@ -31,7 +31,12 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        $menulinks = config('menulinks');
+        $footerlinks = config('footerlinks');
+        $socialicons = config('socialicons');
+        $mainnavicons = config('mainnavicons');
+
+        return view('comics/create', compact('menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
     }
 
     /**
@@ -42,7 +47,18 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+
+        $newComic = new Comic();
+
+
+
+        // metodo che in automatico assegna ad ogni proprietà del model il valore che ci passa il form
+        $newComic->fill($formData);
+
+        $newComic->save();
+
+        return redirect()->route('comics.show', $newComic->id);
     }
 
     /**

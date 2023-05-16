@@ -116,6 +116,8 @@ a {
 #jumbotron {
     background-image: url('/resources/images/jumbotron.jpg');
     background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 400px;
     width: 100%;
 }
@@ -316,6 +318,24 @@ a {
 }
 
 
+// pagina create
+
+#form-container {
+    margin: 40px auto 40px;
+    
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 40px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
 
 
 
