@@ -1,0 +1,367 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#upper-nav {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(2, 130, 249);
+
+    #up-nav-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+
+
+        span {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.7rem;
+            color: white;
+        }
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#main-nav {
+    height: 120px;
+    background-color: white;
+
+    #main-nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+
+
+
+        #nav-logo {
+            height: 100%;
+            padding: 10px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        #nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                color: black;
+
+                li {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    list-style-type: none;
+                    height: 100%;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border: none;
+
+
+
+                    &.active {
+                        a {
+                            color: rgb(2, 130, 249);
+
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            height: 5px;
+                            background-color: rgb(2, 130, 249);
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+
+
+
+#jumbotron {
+    background-image: url('/resources/images/jumbotron.jpg');
+    background-position: top;
+    height: 400px;
+    width: 100%;
+}
+
+#main-container {
+    height: auto;
+    background-color: rgb(28, 28, 28);
+
+    #main-section {
+        position: relative;
+        padding: 100px 0 20px;
+
+        #comics-tag {
+            position: absolute;
+            top: -4%;
+            width: 200px;
+            height: 60px;
+            text-align: center;
+            font-weight: bolder;
+            color: white;
+            background-color: rgb(2, 130, 249);
+
+            h3 {
+                display: inline;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                line-height: 60px;
+                vertical-align: center;
+            }
+        }
+
+        #main-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0 20px;
+
+            button {
+                color: white;
+                font-weight: bold;
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                padding: 10px 50px;
+                background-color: rgb(2, 130, 249);
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+
+
+.image-container {
+    width: 100%;
+    height: 200px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        overflow: hidden;
+    }
+}
+
+.comic-series {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+//pagina del singolo comic
+
+#single-comic-container {
+    width: 100%;
+
+    #blue-bar {
+        width: 100%;
+        height: 80px;
+        background-color: rgb(2, 130, 249);
+    }
+
+    #comic-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        height: 400px;
+        width: 100%;
+        padding: 30px 0;
+
+        #single-comic {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 10px;
+
+            h2 {
+                font-size: 1.7rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                color: rgb(0, 63, 94);
+            }
+        }
+    }
+
+    #description-container {
+        background-color: rgb(246, 246, 246);
+        height: 400px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+//footer
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-image: url('/resources/images/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    color: rgb(149, 149, 149);
+
+    #footer-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0;
+
+        #footer-menu {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 20px;
+            padding: 30px 0;
+
+
+            ul {
+                padding: 0;
+
+                .link-title {
+                    padding: 10px 0;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    color: white;
+
+                }
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        color: rgb(149, 149, 149);
+
+                    }
+
+                }
+            }
+
+        }
+
+        #footer-logo {
+            width: 50%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+            }
+        }
+
+        #footer-copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+
+            a {
+                color: rgb(2, 130, 249);
+            }
+        }
+    }
+
+
+    #footer-nav {
+
+        width: 100%;
+        height: 100px;
+        background-color: rgb(48, 48, 48);
+
+        #footer-nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            #footer-button {
+                display: flex;
+                align-items: center;
+
+                button {
+                    padding: 10px;
+                    font-weight: bold;
+                    color: white;
+                    background-color: inherit;
+                    border: 2px solid rgb(2, 130, 249);
+                }
+            }
+
+            #footer-icons {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                gap: 20px;
+                height: 100%;
+
+                h3 {
+                    font-size: 1.2rem;
+                    color: rgb(2, 130, 249);
+                    padding-right: 20px;
+                }
+
+                img {
+                    height: 40%;
+                    object-fit: contain;
+                }
+
+            }
+
+        }
+
+    }
+}
