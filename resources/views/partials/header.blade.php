@@ -12,12 +12,18 @@
             </div>
             <div id="nav-menu">
                 <ul>
-                    
-                    @for($i = 0; $i < count($menulinks); $i++)
+                    {{-- {{dd($menulinks)}} --}}
+                    @foreach(config('menulinks') as $menulink)
+                        <li @if($menulink == 'Comics') class="active" @endif>
+                            <a href="#">{{ $menulink }}</a>
+                        </li>
+                    @endforeach
+
+                    {{-- @for($i = 0; $i < count($menulinks); $i++)
                     <li @if($i == 1)class="active"@endif>
                         <a href="#">{{$menulinks[$i]}}</a>
                     </li>
-                    @endfor
+                    @endfor --}}
 
                 </ul>
             </div>

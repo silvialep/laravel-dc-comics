@@ -2,7 +2,7 @@
     <div id="footer-container" class="container">
 
         <div id="footer-menu">
-            @foreach($footerlinks as $link)
+            @foreach(config('footerlinks') as $link)
             <ul>
                 <li class="link-title">{{$link['title']}}</li>
                 @foreach($link['links'] as $singleLink)
@@ -27,7 +27,7 @@
     
             <div id="footer-icons">
                 <h3>FOLLOW US</h3>
-                @foreach($socialicons as $icon)
+                @foreach(config('socialicons') as $icon)
                 <a href=""><img src="{{ Vite::asset('resources/images/'.$icon) }}" alt="social icon"></a>
                 @endforeach
             </div>

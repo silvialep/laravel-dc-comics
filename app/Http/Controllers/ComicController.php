@@ -16,12 +16,7 @@ class ComicController extends Controller
     {
         $comics = Comic::all();
 
-        $menulinks = config('menulinks');
-        $footerlinks = config('footerlinks');
-        $socialicons = config('socialicons');
-        $mainnavicons = config('mainnavicons');
-
-        return view('comics/index', compact('comics', 'menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
+        return view('comics/index', compact('comics'));
     }
 
     /**
@@ -31,12 +26,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        $menulinks = config('menulinks');
-        $footerlinks = config('footerlinks');
-        $socialicons = config('socialicons');
-        $mainnavicons = config('mainnavicons');
 
-        return view('comics/create', compact('menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
+        return view('comics/create');
     }
 
     /**
@@ -66,12 +57,8 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        $menulinks = config('menulinks');
-        $footerlinks = config('footerlinks');
-        $socialicons = config('socialicons');
-        $mainnavicons = config('mainnavicons');
 
-        return view('comics/show', compact('comic', 'menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
+        return view('comics/show', compact('comic'));
     }
 
     /**
@@ -82,12 +69,8 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        $menulinks = config('menulinks');
-        $footerlinks = config('footerlinks');
-        $socialicons = config('socialicons');
-        $mainnavicons = config('mainnavicons');
 
-        return view('comics/edit', compact('comic','menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
+        return view('comics/edit', compact('comic'));
     }
 
     /**
