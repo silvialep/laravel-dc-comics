@@ -18,6 +18,8 @@
             </div>
             <div class="comic-description">
                 {{$comic['description']}}
+                <br>
+                {{date('d-m-Y', strtotime($comic['sale_date']))}}
             </div>
         </div>
         <div id="pubbli-section">
