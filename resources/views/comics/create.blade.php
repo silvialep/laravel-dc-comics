@@ -4,6 +4,8 @@
 
 @include('partials/jumbotron')
 
+
+
 <div class="container" id="form-container">
     <form action="{{route('comics.store')}}" method="POST">
     @csrf

@@ -25,7 +25,7 @@
         </div>
 
         <div id="main-button">
-            <button>LOAD MORE</button>
+            <button><a href="{{route('comics.create')}}">Aggiungi</a></button>
         </div>
     
     </div>

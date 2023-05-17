@@ -50,10 +50,7 @@ class ComicController extends Controller
         $formData = $request->all();
 
         $newComic = new Comic();
-
-
-
-        // metodo che in automatico assegna ad ogni proprietà del model il valore che ci passa il form
+        
         $newComic->fill($formData);
 
         $newComic->save();
@@ -85,7 +82,12 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        $menulinks = config('menulinks');
+        $footerlinks = config('footerlinks');
+        $socialicons = config('socialicons');
+        $mainnavicons = config('mainnavicons');
+
+        return view('comics/edit', compact('comic','menulinks', 'footerlinks', 'socialicons', 'mainnavicons'));
     }
 
     /**
@@ -97,7 +99,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $formData = $request->all();
+
+        $comic->update($formData);
+        $comic->save();
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
@@ -108,6 +115,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
