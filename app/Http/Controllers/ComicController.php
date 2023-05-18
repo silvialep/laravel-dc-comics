@@ -40,16 +40,7 @@ class ComicController extends Controller
     {
         $formData = $request->all();
 
-        $request->validate([
-		'title' => 'required|min:5|max:100',
-		'description' => 'required|max:1000',
-		'thumb' => 'required|max:255',
-		'price' => 'required|max:20',
-		'series' => 'required|max:20',
-		'sale_date' => 'required',
-		'type' => 'required|max:50',
-
-	    ]);
+        $this->validateForm($request);
 
         $newComic = new Comic();
         
@@ -95,16 +86,7 @@ class ComicController extends Controller
     {
         $formData = $request->all();
 
-        $request->validate([
-            'title' => 'required|min:5|max:100',
-            'description' => 'required|max:1000',
-            'thumb' => 'required|max:255',
-            'price' => 'required|max:20',
-            'series' => 'required|max:20',
-            'sale_date' => 'required',
-            'type' => 'required|max:50',
-
-        ]);
+        $this->validateForm($request);
 
         $comic->update($formData);
         $comic->save();
@@ -122,5 +104,30 @@ class ComicController extends Controller
     {
         $comic->delete();
         return redirect()->route('comics.index');
+    }
+
+    private function validateForm($request) 
+    {
+        $request->validate([
+            'title' => 'required|min:5|max:100',
+            'description' => 'required|max:1000',
+            'thumb' => 'required|max:255',
+            'price' => 'required|max:20',
+            'series' => 'required|max:20',
+            'sale_date' => 'required',
+            'type' => 'required|max:50',
+        ],
+        [
+            'title.required' => 'Il campo del titolo è richiesto',
+            'title.min' => 'Il campo del titolo deve essere almeno di 5 caratteri',
+            'title.max' => 'Il campo del titolo deve essere al massimo di 100 caratteri',
+            'description.required' => 'Il campo della descrizione è richiesto',
+            'thumb.required' => 'Il link all\'immagine è richiesto',
+            'price.required' => 'Il campo del prezzo è richiesto',
+            'series.required' => 'Il nome della serie è richiesto',
+            'sale_date.required' => 'La data di pubblicazione è richiesta',
+            'type.required' => 'La tipologia di comic è richiesta',
+
+        ]);
     }
 }
