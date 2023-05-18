@@ -37,7 +37,7 @@
 
     <div class="mb-3">
       <label for="sale_date">Data di uscita</label>
-      <input type="text" id="sale_date" name="sale_date">
+      <input type="date" id="sale_date" name="sale_date">
     </div>
 
     <div class="mb-3">

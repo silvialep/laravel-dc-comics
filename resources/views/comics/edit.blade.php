@@ -19,7 +19,7 @@
 
     <div class="mb-3">
       <label for="description">Descrizione</label>
-      <textarea id="description" name="description" value="{{$comic->description}}"></textarea>
+      <textarea id="description" name="description">{{$comic->description}}</textarea>
     </div>
 
     <div class="mb-3">
@@ -39,7 +39,7 @@
 
     <div class="mb-3">
       <label for="sale_date">Data di uscita</label>
-      <input type="text" id="sale_date" name="sale_date" value="{{$comic->sale_date}}">
+      <input type="date" id="sale_date" name="sale_date" value="{{$comic->sale_date}}">
     </div>
 
     <div class="mb-3">
