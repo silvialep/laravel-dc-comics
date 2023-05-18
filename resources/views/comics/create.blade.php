@@ -6,7 +6,7 @@
 
 
 
-<div class="container" id="form-container">
+<div class="container form-container">
     <form action="{{route('comics.store')}}" method="POST">
     @csrf
 
